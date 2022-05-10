@@ -1,0 +1,2479 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-sandiego-12-22-2021__patch1-03-02-2022_03-17-2022_1811.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Show the Name, SHA, URL and Protected status of each Branch from Github for any Owner and Repo </description>
+        <ih_action>false</ih_action>
+        <internal_name>display_branch_details</internal_name>
+        <label_cache>[{"name":"{{action.ip_address}}","label":"action➛IP Address","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.ip_address1}}","label":"action➛IP address","type":"action","ref":"","reference_display":"","base_type":"ip_address","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"IP Address","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"ip_address","uiUniqueId":"a24a09f9-fe96-4572-9e62-5e1a4f5f7039"}},{"name":"{{action.repos}}","label":"action➛repo","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"697275b4-a6a2-4062-a64b-352b7d08f13c"}},{"name":"{{action.owner}}","label":"action➛owner","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repos2}}","label":"action➛repos","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repos1}}","label":"action➛repos","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repo}}","label":"action➛repo","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repo1}}","label":"action➛repo","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_name}}","label":"action➛Branch Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_sha}}","label":"action➛Branch SHA","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_url}}","label":"action➛Branch URL","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_protected}}","label":"action➛Branch Protected","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[70b57d5c-a97c-4e0d-aa9c-95a999a9354a].response_body}}","label":"step➛Call IPInfo REST API➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[70b57d5c-a97c-4e0d-aa9c-95a999a9354a].status_code}}","label":"step➛Call IPInfo REST API➛Status Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].variable}}","label":"step➛Parse Returned Data➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].hostname}}","label":"step➛Parse Returned Data➛hostname","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].city}}","label":"step➛Parse Returned Data➛city","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].region}}","label":"step➛Parse Returned Data➛region","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].country}}","label":"step➛Parse Returned Data➛country","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].latitude}}","label":"step➛Parse Returned Data➛latitude","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].longitude}}","label":"step➛Parse Returned Data➛longitude","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].org}}","label":"step➛Parse Returned Data➛org","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].postal}}","label":"step➛Parse Returned Data➛postal","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].timezone}}","label":"step➛Parse Returned Data➛timezone","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].readme}}","label":"step➛Parse Returned Data➛readme","type":"step","ref":"","reference_display":"","base_type":"url","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[65e5636c-a85c-4927-9fa8-5c850c7269e4].response_body}}","label":"step➛Call GitHub API➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[65e5636c-a85c-4927-9fa8-5c850c7269e4].status_code}}","label":"step➛Call GitHub API➛Status Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].variable}}","label":"step➛Parse GitHub Data➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].name}}","label":"step➛Parse GitHub Data➛name","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","child_name":"name_child0","uiUniqueId":"72beb722-2298-455e-996a-6973a8ffb8dd","uiTypeLabel":"Array.String","co_type_name":"","child_label":"name_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"array.string","child_type":"string","child_uiUniqueId":"58203dd2-c1b2-4c3a-b2da-f9a22c13e06c"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].sha}}","label":"step➛Parse GitHub Data➛sha","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"e83e4596-dd8b-4d41-8900-58dbe0d4e4c9"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].commit}}","label":"step➛Parse GitHub Data➛Commit","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].url}}","label":"step➛Parse GitHub Data➛url","type":"step","ref":"","reference_display":"","base_type":"url","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"URL","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"url","uiUniqueId":"1d62a6b7-b246-4f51-a393-7efea9d19eed"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].protected}}","label":"step➛Parse GitHub Data➛protected","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"12b3f8be-3a4b-49a4-bda4-6ee44b8e7a1d"}},{"name":"{{step[65e5636c-a85c-4927-9fa8-5c850c7269e4].response_headers}}","label":"step➛Call GitHub API➛Response Headers","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].root.root_array}}","label":"step➛JSON Parser step➛root➛root_array","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].__step_status__}}","label":"step➛JSON Parser step➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master_snapshot>2b9f77ba1b934110b86942e4cc4bcb4a</master_snapshot>
+        <name>Display GitHub Branch Details</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:44:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>580f3ff61b934110b86942e4cc4bcbbd</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Display GitHub Branch Details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_580f3ff61b934110b86942e4cc4bcbbd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=580f3ff61b934110b86942e4cc4bcbbd"/>
+    <sys_variable_value action="delete_multiple" query="document_key=580f3ff61b934110b86942e4cc4bcbbd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>580f3ff61b934110b86942e4cc4bcbbd</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:08</sys_created_on>
+        <sys_id>3d9f37ba1b934110b86942e4cc4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:08</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">f19f37ba1b934110b86942e4cc4bcb87</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>580f3ff61b934110b86942e4cc4bcbbd</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:08</sys_created_on>
+        <sys_id>f19f37ba1b934110b86942e4cc4bcb91</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:14</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD759f37badf934110bc9679db59c72f7b":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD759f37badf934110bc9679db59c72f7b.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"fdfb99e0-1a4a-401d-a35b-19224874fc10\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD759f37badf934110bc9679db59c72f7b\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"5\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">799f37ba1b934110b86942e4cc4bcb82</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=580f3ff61b934110b86942e4cc4bcbbd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchname</field>
+        <id>580f3ff61b934110b86942e4cc4bcbbd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>538ff3ba1b934110b86942e4cc4bcb54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <table>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</table>
+        <value>{{action.branch_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchprotected</field>
+        <id>580f3ff61b934110b86942e4cc4bcbbd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>178ff3ba1b934110b86942e4cc4bcb53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <table>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</table>
+        <value>{{action.branch_protected}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchsha</field>
+        <id>580f3ff61b934110b86942e4cc4bcbbd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>9f8ff3ba1b934110b86942e4cc4bcb53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <table>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</table>
+        <value>{{action.branch_sha}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchurl</field>
+        <id>580f3ff61b934110b86942e4cc4bcbbd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>db8ff3ba1b934110b86942e4cc4bcb53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <table>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</table>
+        <value>{{action.branch_url}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>580f3ff61b934110b86942e4cc4bcbbd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:08</sys_created_on>
+        <sys_id>b99f37ba1b934110b86942e4cc4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:08</sys_updated_on>
+        <table>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>580f3ff61b934110b86942e4cc4bcbbd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:08</sys_created_on>
+        <sys_id>f59f37ba1b934110b86942e4cc4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:08</sys_updated_on>
+        <table>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=580f3ff61b934110b86942e4cc4bcbbd"/>
+    <sys_hub_action_input action="delete_multiple" query="model=580f3ff61b934110b86942e4cc4bcbbd^sys_idNOT IN0f8fbf3a1b934110b86942e4cc4bcbdb,438fbf3a1b934110b86942e4cc4bcbe1,4f8ff3ba1b934110b86942e4cc4bcb1f,c78ff3ba1b934110b86942e4cc4bcb1b"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1eadbbc8-6d82-4833-b2bb-5498c81e3e85</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch Name</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>0f8fbf3a1b934110b86942e4cc4bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0f8fbf3a1b934110b86942e4cc4bcbdb"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c9f971df-d6cb-4f2c-9edb-b5e54388fc22</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_sha</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch SHA</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>438fbf3a1b934110b86942e4cc4bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=438fbf3a1b934110b86942e4cc4bcbe1"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8c5c00d7-5673-4ad8-9dcf-03ac63f2ad6e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_protected</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch Protected</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>4f8ff3ba1b934110b86942e4cc4bcb1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4f8ff3ba1b934110b86942e4cc4bcb1f"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=be59f933-d49a-4a2f-a2da-a382813e6140</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch URL</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>c78ff3ba1b934110b86942e4cc4bcb1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c78ff3ba1b934110b86942e4cc4bcb1b"/>
+    <sys_hub_action_output action="delete_multiple" query="model=580f3ff61b934110b86942e4cc4bcbbd^sys_idNOT IN1b8ff3ba1b934110b86942e4cc4bcb2f,538ff3ba1b934110b86942e4cc4bcb2b,5f8ff3ba1b934110b86942e4cc4bcb4c,799f37ba1b934110b86942e4cc4bcb82,df8ff3ba1b934110b86942e4cc4bcb25,f19f37ba1b934110b86942e4cc4bcb87"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=e89d9275-d851-4120-ab26-c82481a81374</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchsha</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchSHA</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>1b8ff3ba1b934110b86942e4cc4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1b8ff3ba1b934110b86942e4cc4bcb2f"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1b8ff3ba1b934110b86942e4cc4bcb2f"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=9c3f159c-2b80-44d2-ad11-3c5eadcc885c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchurl</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchURL</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>538ff3ba1b934110b86942e4cc4bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=538ff3ba1b934110b86942e4cc4bcb2b"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=538ff3ba1b934110b86942e4cc4bcb2b"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=41b84555-e82a-4283-bda1-6e10d1275b7f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchprotected</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchProtected</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>5f8ff3ba1b934110b86942e4cc4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5f8ff3ba1b934110b86942e4cc4bcb4c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5f8ff3ba1b934110b86942e4cc4bcb4c"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FD759f37badf934110bc9679db59c72f7b,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=fdfb99e0-1a4a-401d-a35b-19224874fc10</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:07</sys_created_on>
+        <sys_id>799f37ba1b934110b86942e4cc4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=799f37ba1b934110b86942e4cc4bcb82"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=799f37ba1b934110b86942e4cc4bcb82"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=2ab86993-8433-4de6-976e-c2439d6c18a1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchname</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchName</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>df8ff3ba1b934110b86942e4cc4bcb25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=df8ff3ba1b934110b86942e4cc4bcb25"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=df8ff3ba1b934110b86942e4cc4bcb25"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=4981de24-eca6-4cea-87e5-bb8dad6c7a27,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</model>
+        <model_id>580f3ff61b934110b86942e4cc4bcbbd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:07</sys_created_on>
+        <sys_id>f19f37ba1b934110b86942e4cc4bcb87</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f19f37ba1b934110b86942e4cc4bcb87"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f19f37ba1b934110b86942e4cc4bcb87"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=580f3ff61b934110b86942e4cc4bcbbd"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=580f3ff61b934110b86942e4cc4bcbbd^sys_idNOT IN9b8ff3ba1b934110b86942e4cc4bcb62"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>9b8ff3ba1b934110b86942e4cc4bcb62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=9b8ff3ba1b934110b86942e4cc4bcb62"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd^sys_idNOT IN4b8ff3ba1b934110b86942e4cc4bcb1a,578ff3ba1b934110b86942e4cc4bcb23,c38fbf3a1b934110b86942e4cc4bcbe0,cf8ff3ba1b934110b86942e4cc4bcb1e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_sha</element>
+        <help/>
+        <hint/>
+        <label>Branch SHA</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>4b8ff3ba1b934110b86942e4cc4bcb1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_protected</element>
+        <help/>
+        <hint/>
+        <label>Branch Protected</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>578ff3ba1b934110b86942e4cc4bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_name</element>
+        <help/>
+        <hint/>
+        <label>Branch Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>c38fbf3a1b934110b86942e4cc4bcbe0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_url</element>
+        <help/>
+        <hint/>
+        <label>Branch URL</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:56</sys_created_on>
+        <sys_id>cf8ff3ba1b934110b86942e4cc4bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:56</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_580f3ff61b934110b86942e4cc4bcbbd"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd^sys_idNOT IN759f37ba1b934110b86942e4cc4bcb86,978ff3ba1b934110b86942e4cc4bcb50,9b8ff3ba1b934110b86942e4cc4bcb2e,b59f37ba1b934110b86942e4cc4bcb8d,d38ff3ba1b934110b86942e4cc4bcb2a,df8ff3ba1b934110b86942e4cc4bcb4b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:07</sys_created_on>
+        <sys_id>759f37ba1b934110b86942e4cc4bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchprotected</element>
+        <help/>
+        <hint/>
+        <label>BranchProtected</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>978ff3ba1b934110b86942e4cc4bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchurl</element>
+        <help/>
+        <hint/>
+        <label>BranchURL</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>9b8ff3ba1b934110b86942e4cc4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:07</sys_created_on>
+        <sys_id>b59f37ba1b934110b86942e4cc4bcb8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchname</element>
+        <help/>
+        <hint/>
+        <label>BranchName</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>d38ff3ba1b934110b86942e4cc4bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchsha</element>
+        <help/>
+        <hint/>
+        <label>BranchSHA</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:46:57</sys_created_on>
+        <sys_id>df8ff3ba1b934110b86942e4cc4bcb4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:46:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_580f3ff61b934110b86942e4cc4bcbbd"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=580f3ff61b934110b86942e4cc4bcbbd^sys_idNOT INccafb7ba1b934110b86942e4cc4bcb10"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ccafb7ba1b934110b86942e4cc4bcb10","name":"plan","plan_signature":null}}</plan>
+        <snapshot>779f77ba1b934110b86942e4cc4bcbb9</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ccafb7ba1b934110b86942e4cc4bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:16</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Show the Name, SHA, URL and Protected status of each Branch from Github for any Owner and Repo </description>
+        <internal_name>display_github_branch_details</internal_name>
+        <label_cache>[{"name":"{{action.ip_address}}","label":"action➛IP Address","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.ip_address1}}","label":"action➛IP address","type":"action","ref":"","reference_display":"","base_type":"ip_address","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"IP Address","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"ip_address","uiUniqueId":"a24a09f9-fe96-4572-9e62-5e1a4f5f7039"}},{"name":"{{action.repos}}","label":"action➛repo","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"697275b4-a6a2-4062-a64b-352b7d08f13c"}},{"name":"{{action.owner}}","label":"action➛owner","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repos2}}","label":"action➛repos","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repos1}}","label":"action➛repos","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repo}}","label":"action➛repo","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.repo1}}","label":"action➛repo","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_name}}","label":"action➛Branch Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_sha}}","label":"action➛Branch SHA","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_url}}","label":"action➛Branch URL","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.branch_protected}}","label":"action➛Branch Protected","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[70b57d5c-a97c-4e0d-aa9c-95a999a9354a].response_body}}","label":"step➛Call IPInfo REST API➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[70b57d5c-a97c-4e0d-aa9c-95a999a9354a].status_code}}","label":"step➛Call IPInfo REST API➛Status Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].variable}}","label":"step➛Parse Returned Data➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].hostname}}","label":"step➛Parse Returned Data➛hostname","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].city}}","label":"step➛Parse Returned Data➛city","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].region}}","label":"step➛Parse Returned Data➛region","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].country}}","label":"step➛Parse Returned Data➛country","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].latitude}}","label":"step➛Parse Returned Data➛latitude","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].longitude}}","label":"step➛Parse Returned Data➛longitude","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].org}}","label":"step➛Parse Returned Data➛org","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].postal}}","label":"step➛Parse Returned Data➛postal","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].timezone}}","label":"step➛Parse Returned Data➛timezone","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[3001d5c8-78c1-4d77-a80d-ed9a41a24cce].readme}}","label":"step➛Parse Returned Data➛readme","type":"step","ref":"","reference_display":"","base_type":"url","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[65e5636c-a85c-4927-9fa8-5c850c7269e4].response_body}}","label":"step➛Call GitHub API➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[65e5636c-a85c-4927-9fa8-5c850c7269e4].status_code}}","label":"step➛Call GitHub API➛Status Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].variable}}","label":"step➛Parse GitHub Data➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].name}}","label":"step➛Parse GitHub Data➛name","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","child_name":"name_child0","uiUniqueId":"72beb722-2298-455e-996a-6973a8ffb8dd","uiTypeLabel":"Array.String","co_type_name":"","child_label":"name_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"array.string","child_type":"string","child_uiUniqueId":"58203dd2-c1b2-4c3a-b2da-f9a22c13e06c"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].sha}}","label":"step➛Parse GitHub Data➛sha","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"e83e4596-dd8b-4d41-8900-58dbe0d4e4c9"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].commit}}","label":"step➛Parse GitHub Data➛Commit","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].url}}","label":"step➛Parse GitHub Data➛url","type":"step","ref":"","reference_display":"","base_type":"url","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"URL","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"url","uiUniqueId":"1d62a6b7-b246-4f51-a393-7efea9d19eed"}},{"name":"{{step[0d68b2ea-e066-4983-9e05-fdd69eb5ef25].protected}}","label":"step➛Parse GitHub Data➛protected","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"12b3f8be-3a4b-49a4-bda4-6ee44b8e7a1d"}},{"name":"{{step[65e5636c-a85c-4927-9fa8-5c850c7269e4].response_headers}}","label":"step➛Call GitHub API➛Response Headers","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].variable}}","label":"step➛JSON Parser step➛variable","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].root.root_array}}","label":"step➛JSON Parser step➛root➛root_array","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].__step_status__}}","label":"step➛JSON Parser step➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2b2fef7b-6596-4b13-9d48-c17f92d23469].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Display GitHub Branch Details</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Display GitHub Branch Details">580f3ff61b934110b86942e4cc4bcbbd</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2b9f77ba1b934110b86942e4cc4bcb4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:14</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=2b9f77ba1b934110b86942e4cc4bcb4a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2b9f77ba1b934110b86942e4cc4bcb4a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>2b9f77ba1b934110b86942e4cc4bcb4a</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>b79f77ba1b934110b86942e4cc4bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDa79f77bac0934110ab2f32d7aaa59b61":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDa79f77bac0934110ab2f32d7aaa59b61.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"fdfb99e0-1a4a-401d-a35b-19224874fc10\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDa79f77bac0934110ab2f32d7aaa59b61\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"5\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">3f9f77ba1b934110b86942e4cc4bcb75</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>2b9f77ba1b934110b86942e4cc4bcb4a</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>f39f77ba1b934110b86942e4cc4bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">379f77ba1b934110b86942e4cc4bcb7a</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2b9f77ba1b934110b86942e4cc4bcb4a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchname</field>
+        <id>2b9f77ba1b934110b86942e4cc4bcb4a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>739f77ba1b934110b86942e4cc4bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</table>
+        <value>{{action.branch_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchprotected</field>
+        <id>2b9f77ba1b934110b86942e4cc4bcb4a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>b39f77ba1b934110b86942e4cc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</table>
+        <value>{{action.branch_protected}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchsha</field>
+        <id>2b9f77ba1b934110b86942e4cc4bcb4a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>3b9f77ba1b934110b86942e4cc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</table>
+        <value>{{action.branch_sha}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>branchurl</field>
+        <id>2b9f77ba1b934110b86942e4cc4bcb4a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>779f77ba1b934110b86942e4cc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</table>
+        <value>{{action.branch_url}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>2b9f77ba1b934110b86942e4cc4bcb4a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>bf9f77ba1b934110b86942e4cc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>2b9f77ba1b934110b86942e4cc4bcb4a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>fb9f77ba1b934110b86942e4cc4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=2b9f77ba1b934110b86942e4cc4bcb4a"/>
+    <sys_hub_action_input action="delete_multiple" query="model=2b9f77ba1b934110b86942e4cc4bcb4a^sys_idNOT IN6b9f77ba1b934110b86942e4cc4bcb5b,6f9f77ba1b934110b86942e4cc4bcb52,af9f77ba1b934110b86942e4cc4bcb4d,e39f77ba1b934110b86942e4cc4bcb57"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8c5c00d7-5673-4ad8-9dcf-03ac63f2ad6e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_protected</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch Protected</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>6b9f77ba1b934110b86942e4cc4bcb5b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6b9f77ba1b934110b86942e4cc4bcb5b"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c9f971df-d6cb-4f2c-9edb-b5e54388fc22</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_sha</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch SHA</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:14</sys_created_on>
+        <sys_id>6f9f77ba1b934110b86942e4cc4bcb52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6f9f77ba1b934110b86942e4cc4bcb52"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1eadbbc8-6d82-4833-b2bb-5498c81e3e85</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch Name</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:14</sys_created_on>
+        <sys_id>af9f77ba1b934110b86942e4cc4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=af9f77ba1b934110b86942e4cc4bcb4d"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=be59f933-d49a-4a2f-a2da-a382813e6140</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branch_url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Branch URL</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>e39f77ba1b934110b86942e4cc4bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e39f77ba1b934110b86942e4cc4bcb57"/>
+    <sys_hub_action_output action="delete_multiple" query="model=2b9f77ba1b934110b86942e4cc4bcb4a^sys_idNOT IN379f77ba1b934110b86942e4cc4bcb7a,3f9f77ba1b934110b86942e4cc4bcb75,6b9f77ba1b934110b86942e4cc4bcb63,779f77ba1b934110b86942e4cc4bcb71,bf9f77ba1b934110b86942e4cc4bcb6c,e79f77ba1b934110b86942e4cc4bcb68"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=4981de24-eca6-4cea-87e5-bb8dad6c7a27,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>379f77ba1b934110b86942e4cc4bcb7a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=379f77ba1b934110b86942e4cc4bcb7a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=379f77ba1b934110b86942e4cc4bcb7a"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDa79f77bac0934110ab2f32d7aaa59b61,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=fdfb99e0-1a4a-401d-a35b-19224874fc10</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>3f9f77ba1b934110b86942e4cc4bcb75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3f9f77ba1b934110b86942e4cc4bcb75"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3f9f77ba1b934110b86942e4cc4bcb75"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=2ab86993-8433-4de6-976e-c2439d6c18a1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchname</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchName</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>6b9f77ba1b934110b86942e4cc4bcb63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6b9f77ba1b934110b86942e4cc4bcb63"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6b9f77ba1b934110b86942e4cc4bcb63"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=41b84555-e82a-4283-bda1-6e10d1275b7f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchprotected</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchProtected</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>779f77ba1b934110b86942e4cc4bcb71</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=779f77ba1b934110b86942e4cc4bcb71"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=779f77ba1b934110b86942e4cc4bcb71"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=e89d9275-d851-4120-ab26-c82481a81374</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchsha</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchSHA</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>bf9f77ba1b934110b86942e4cc4bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bf9f77ba1b934110b86942e4cc4bcb6c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=bf9f77ba1b934110b86942e4cc4bcb6c"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=9c3f159c-2b80-44d2-ad11-3c5eadcc885c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>branchurl</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>BranchURL</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</model>
+        <model_id>2b9f77ba1b934110b86942e4cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>e79f77ba1b934110b86942e4cc4bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e79f77ba1b934110b86942e4cc4bcb68"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e79f77ba1b934110b86942e4cc4bcb68"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2b9f77ba1b934110b86942e4cc4bcb4a"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=2b9f77ba1b934110b86942e4cc4bcb4a^sys_idNOT IN739f77ba1b934110b86942e4cc4bcbb9"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Display GitHub Branch Details">2b9f77ba1b934110b86942e4cc4bcb4a</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>739f77ba1b934110b86942e4cc4bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=739f77ba1b934110b86942e4cc4bcbb9"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a^sys_idNOT IN639f77ba1b934110b86942e4cc4bcb5f,679f77ba1b934110b86942e4cc4bcb56,eb9f77ba1b934110b86942e4cc4bcb5a,ef9f77ba1b934110b86942e4cc4bcb51"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_protected</element>
+        <help/>
+        <hint/>
+        <label>Branch Protected</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>639f77ba1b934110b86942e4cc4bcb5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_sha</element>
+        <help/>
+        <hint/>
+        <label>Branch SHA</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>679f77ba1b934110b86942e4cc4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_url</element>
+        <help/>
+        <hint/>
+        <label>Branch URL</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>eb9f77ba1b934110b86942e4cc4bcb5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branch_name</element>
+        <help/>
+        <hint/>
+        <label>Branch Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:14</sys_created_on>
+        <sys_id>ef9f77ba1b934110b86942e4cc4bcb51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_2b9f77ba1b934110b86942e4cc4bcb4a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a^sys_idNOT IN339f77ba1b934110b86942e4cc4bcb6c,6b9f77ba1b934110b86942e4cc4bcb67,b79f77ba1b934110b86942e4cc4bcb79,bf9f77ba1b934110b86942e4cc4bcb74,f79f77ba1b934110b86942e4cc4bcb70,ff9f77ba1b934110b86942e4cc4bcb7f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchurl</element>
+        <help/>
+        <hint/>
+        <label>BranchURL</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>339f77ba1b934110b86942e4cc4bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchname</element>
+        <help/>
+        <hint/>
+        <label>BranchName</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>6b9f77ba1b934110b86942e4cc4bcb67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>b79f77ba1b934110b86942e4cc4bcb79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchprotected</element>
+        <help/>
+        <hint/>
+        <label>BranchProtected</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>bf9f77ba1b934110b86942e4cc4bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>branchsha</element>
+        <help/>
+        <hint/>
+        <label>BranchSHA</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>f79f77ba1b934110b86942e4cc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 16:47:15</sys_created_on>
+        <sys_id>ff9f77ba1b934110b86942e4cc4bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:47:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_2b9f77ba1b934110b86942e4cc4bcb4a"/>
+    <sys_hub_action_type_definition action="update">
+        <sys_id>580f3ff61b934110b86942e4cc4bcbbd</sys_id>
+        <latest_snapshot>2b9f77ba1b934110b86942e4cc4bcb4a</latest_snapshot>
+    </sys_hub_action_type_definition>
+</record_update>

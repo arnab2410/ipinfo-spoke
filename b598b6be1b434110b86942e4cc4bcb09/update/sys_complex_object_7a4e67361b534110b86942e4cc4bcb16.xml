@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDb64e6736c8534110e0b83fc30cc1da16</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>b598b6be1b434110b86942e4cc4bcb09</scope_name>
+        <serialized_content>{"FlowDesigner:FDb64e6736c8534110e0b83fc30cc1da16":{"root_array":[{"$61_root_array":{"protected":"String","protected.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"protected\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\",\"uiUniqueId\":\"6dde3f34-d771-46c6-9ba5-babfb2c23034\"}"},"commit":{"sha":"String","sha.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"sha\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"063d2b40-50f1-4c5f-a709-b6331d95de78\"}"},"url":"String","url.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"url\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\",\"uiUniqueId\":\"350cf4d6-bb03-4fee-a65d-9707acfabf1e\"}"}},"commit.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"commit\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\",\"uiUniqueId\":\"4acc9be8-c977-45d3-8013-d5a183cb023d\"}"},"name":"String","name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"6fffeb8e-c156-4d83-bb22-eee1e6cf7aef\"}"}}}],"root_array.$field_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"root_array\",\"mandatory\":\"false\",\"child_name\":\"root_array_object\",\"uiUniqueId\":\"7468fe58-a5ac-41fb-a6a7-8b73cad35898\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"root_array_object\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"0\",\"child_uiUniqueId\":\"e9af03be-9ca1-4926-9760-49dd9c9b3924\"}"}},"FlowDesigner:FDb64e6736c8534110e0b83fc30cc1da16.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"root\",\"mandatory\":\"false\",\"uiUniqueId\":\"9a086f12-2636-4c7b-82bb-8cb9fd20e2bb\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDb64e6736c8534110e0b83fc30cc1da16\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-10 15:31:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7a4e67361b534110b86942e4cc4bcb16</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>FDb64e6736c8534110e0b83fc30cc1da16</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IPInfo Spoke" source="x_759150_ipinfo_sp">b598b6be1b434110b86942e4cc4bcb09</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IPInfo Spoke">b598b6be1b434110b86942e4cc4bcb09</sys_scope>
+        <sys_update_name>sys_complex_object_7a4e67361b534110b86942e4cc4bcb16</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-10 16:51:02</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>
